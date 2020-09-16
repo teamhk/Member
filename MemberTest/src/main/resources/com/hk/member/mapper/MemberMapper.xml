@@ -9,4 +9,35 @@
 select * from members order by mno
 </select>
 
+<insert id="memberRegister">
+	insert into members (mno,email,pwd,mname,cre_date,mod_date)
+	values (member_seq.nextVal, #{email},#{pwd},#{mname},sysdate,sysdate)
+</insert>
+
+<select id="memberGetOne" resultType="com.hk.member.dto.MemberVO" parameterType="int">
+select * from members where mno=#{mno}
+</select>
+
+<update id="memberUpdate">
+update members 
+set email=#{email},
+	pwd=#{pwd},
+	mname=#{mname},
+	mod_date=sysdate
+	where mno = #{mno}
+</update>
+
+<delete id="memberDelete">
+
+delete members where mno=#{mno}
+
+</delete>
+
+<select id="memberLogin">
+
+select * from members where email=#{email} and pwd=#{pwd}
+
+</select>
+
+
 </mapper>
