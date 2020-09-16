@@ -16,7 +16,7 @@ ${member.mno}, ${member.mname}, ${member.email}, ${member.pwd},
 <fmt:formatDate value="${cre_date}" pattern="yyyy-mm-dd"/>
 <fmt:formatDate value="${mod_date}" pattern="yyyy-mm-dd"/>
 <input type="button" onclick="location.href='update?mno=${member.mno}'" value="수정">
-<input type="button" onclick="location.href='delete?mno=${member.mno}'" value="삭제">
+<input type="button" onclick="location.href='delete?mno=${member.mno}'" value="탈퇴">
 <br>
 </c:forEach>
 
