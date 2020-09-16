@@ -29,7 +29,7 @@ set email=#{email},
 
 <delete id="memberDelete">
 
-delete members where mno=#{mno}
+delete from members where mno=#{mno}
 
 </delete>
 

@@ -9,10 +9,10 @@
 </head>
 <body>
 <h1>회원 가입</h1>
-<form action="register" method="post">
-이름:<input type="text" name="name">
-E-MAIL:<input type="text" name="email">
-비밀번호:<input type="password" name="password">
+<form action="register" method="post"><br>
+이름:<input type="text" name="mname"><br>
+E-MAIL:<input type="text" name="email"><br>
+비밀번호:<input type="password" name="pwd"><br>
 <input type="submit" value="추가">
 <input type="button" onclick="location.href='list'" value="취소"> 
 </form>
