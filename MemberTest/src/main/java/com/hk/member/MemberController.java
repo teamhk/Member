@@ -76,7 +76,7 @@ public class MemberController {
 	}
 	
 	@PostMapping("member/delete")
-	public String memberDeletePost(@RequestParam("mno")int mno, Model model) {
+	public String memberDeletePost(@RequestParam("mno") int mno, Model model) {
 		System.out.println("mno:"+mno);
 		memberService.memberDelete(mno);
 		
