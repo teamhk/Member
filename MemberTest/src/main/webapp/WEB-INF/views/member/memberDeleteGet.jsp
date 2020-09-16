@@ -1,10 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+
+<jsp:include page="../include/header.jsp" />
+<title>삭제 확인</title>
 <script>
 function loadFnc() {
 	var txt;
@@ -14,10 +12,11 @@ function loadFnc() {
 		//document.forms["success"].submit();
 	} else {
 		txt="회원정보 삭제를 취소하였습니다."
+		document.getElementById("cancel").innerHTML=txt;
 	}
-	document.getElementById("cancel").innerHTML=txt;
 }
 window.onload=loadFnc;
+
 </script>
 </head>
 <body>
@@ -27,5 +26,6 @@ window.onload=loadFnc;
 </form>
 <p id="cancel"></p>
 <input type="button" onclick="location.href='list'" value="회원목록">
-</body>
+
+<jsp:include page="../include/footer.jsp" />
 </html>

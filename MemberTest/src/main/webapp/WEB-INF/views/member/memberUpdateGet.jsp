@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
+
+<jsp:include page="../include/header.jsp" />
 <title>회원정보 수정</title>
 </head>
 <body>
@@ -17,5 +15,5 @@ E-MAIL:<input type="text" value="${member.email}" name="email"><br>
 <input type="reset" value="취소">
 <input type="button" onclick="location.href='list'" value="목록">
 </form>
-</body>
+<jsp:include page="../include/footer.jsp" />
 </html>
