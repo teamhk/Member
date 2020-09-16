@@ -1,18 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+   crossorigin="anonymous">
+   
+</script>
 <jsp:include page="../include/header.jsp" />
 <title>회원 등록</title>
 <script>
-	$().ready(function()){
-		$("#checkEmail").change(function()) {
+	$().ready(function(){
+		$("#checkEmail").change(function() {
 			var checkEmail=$("#checkEmail").val();
 
 			$.ajax({
 				url:'/member/rest/checkEmailJson',
 				data:{
-					email:checkEmail},
+					email : checkEmail
+				},
 				dataType : 'text', /*html, text, json, xml, script*/
 				method : 'get',
 				success : function(data) {
@@ -30,9 +35,9 @@
 				error : function() {
 					alert("ajax 에러");
 				}
-			})
-		}
-	}
+			});
+		});
+	});
 </script>
 </head>
 <body>
