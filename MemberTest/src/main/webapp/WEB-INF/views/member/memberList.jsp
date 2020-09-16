@@ -28,7 +28,8 @@
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Member List</h6>
+              <div class="m-0 font-weight-bold text-primary">Member List</div>&nbsp;&nbsp;&nbsp;
+     		<span class="m-0 font-weight-bold text-primary"> ${loginMember.mname}</span> 님 환영합니다.
             </div>
             <div class="card-body">
               <div class="table-responsive">
