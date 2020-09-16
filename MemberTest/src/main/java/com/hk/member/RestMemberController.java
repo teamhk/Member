@@ -52,9 +52,11 @@ public class RestMemberController {
 	      // 그냥 return 하면 200OK인데.. text를 구분해서 보내야 하나?
 	      MemberVO member = memberService.checkIdDup(email);
 	      if (member == null) { 
-	         // 못찾았음... login과 반대
+	         System.out.println("중복아님");
+	    	  // 못찾았음... login과 반대
 	         return "0"; // 못찾았음.
 	      } else { 
+	    	  System.out.println("중복이야");
 	         return "1"; // 찾았음.. 중복임.. 아이디 바꿔야함.
 	      }
 	   }
