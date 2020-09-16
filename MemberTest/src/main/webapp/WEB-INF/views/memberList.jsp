@@ -10,13 +10,13 @@
 </head>
 <body>
 <h1>회원 목록</h1>
-<input type="button" onclick="location.href='register'" value="회원가입">
+<input type="button" onclick="location.href='register'" value="회원가입"><br>
 <c:forEach var="member" items="${members}">
 ${member.mno}, ${member.mname}, ${member.email}, ${member.pwd}, 
 <fmt:formatDate value="${cre_date}" pattern="yyyy-mm-dd"/>
 <fmt:formatDate value="${mod_date}" pattern="yyyy-mm-dd"/>
-<input type="button" onclick="location.href='update?mno=<c:out value="${members.mno}" />'" value="수정">
-<input type="button" onclick="location.href='delete?mno=<c:out value="${members.mno}" />'"  value="삭제">
+<input type="button" onclick="location.href='update?mno=${member.mno}'" value="수정">
+<input type="button" onclick="location.href='delete?mno=${member.mno}'" value="삭제">
 <br>
 </c:forEach>
 

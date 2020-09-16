@@ -6,7 +6,7 @@
 <mapper namespace="com.hk.member.mapper.MemberMapper">
 
 <select id="memberList" resultType="com.hk.member.dto.MemberVO">
-select * from members
+select * from members order by mno
 </select>
 
 </mapper>
