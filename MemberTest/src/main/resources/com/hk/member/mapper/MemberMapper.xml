@@ -33,7 +33,7 @@ delete from members where mno=#{mno}
 
 </delete>
 
-<select id="memberLogin">
+<select id="memberLogin" resultType="com.hk.member.dto.MemberVO">
 
 select * from members where email=#{email} and pwd=#{pwd}
 

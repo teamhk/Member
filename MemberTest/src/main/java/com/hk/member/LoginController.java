@@ -21,7 +21,7 @@ public class LoginController {
 	
 	@GetMapping("/login")
 	public String memberLoginGet(Model model) {
-		return "Login";
+		return "/auth/Login";
 	}
 	
 	@PostMapping("/login")
@@ -30,15 +30,15 @@ public class LoginController {
 		boolean isLogin=loginMember!=null;
 		if(isLogin) {
 			session.setAttribute("loginMember", loginMember);
-			return "redirect:../member/memberList";
+			return "redirect:../member/list";
 		} else {
-			return "LoginFail";
+			return "/auth/LoginFail";
 		}
 	}
 	
 	@GetMapping("/logout")
 	public String memberLogout(HttpSession session) {
 		session.invalidate();
-		return "redirect:../member/memberList";
+		return "/auth/Login";
 	}
 }
