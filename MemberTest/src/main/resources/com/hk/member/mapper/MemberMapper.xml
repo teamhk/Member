@@ -39,5 +39,8 @@ select * from members where email=#{email} and pwd=#{pwd}
 
 </select>
 
+<select id="checkIdDup" resultType="com.hk.member.dto.MemberVO">
+select * from members where email=#{email}
+</select>
 
 </mapper>

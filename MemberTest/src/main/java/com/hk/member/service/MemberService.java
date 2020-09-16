@@ -46,4 +46,7 @@ public class MemberService {
 		return memberMapper.memberLogin(member);
 	}
 	
+	public MemberVO checkIdDup(String email) {
+		return memberMapper.checkIdDup(email);
+	}
 }
